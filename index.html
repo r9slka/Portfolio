@@ -1,64 +1,13 @@
 <!DOCTYPE html>
+<!-- =====================================================================
+     LAYOUT FILE — do not edit for content changes.
+     Edit  content.js  instead — it holds all text, projects and images.
+     ===================================================================== -->
 <html lang="en">
-<!--
-================================================================================
-  HOW TO EDIT INFO
-================================================================================
-  All visible text sits between tags like >this<. Change only the words between
-  the two angle brackets — never touch the tags themselves.
-
-  WHAT TO CHANGE          WHERE TO FIND IT (search with Ctrl+F)
-  ─────────────────────────────────────────────────────────────
-  Status (availability)   Search: "Available —"   → change the text after >
-  Location                Search: "Hedehusene"    → change the city / country
-  Role (job title)        Search: "Production &amp; Design Engineer"
-  Languages               Search: "FR · RO native"
-  Email                   Search: "ronaldoplamadeala@gmail.com" (appears twice)
-  Revision date           Search: "Rev. 2026.06"  → also search "REV 2026.06"
-                          (one copy in the header topbar, one in the footer)
-
-  That's it — plain text edits, no code knowledge needed.
-================================================================================
-
-  HOW TO ADD / CHANGE IMAGES
-================================================================================
-  Images are NOT in the code. Each project card looks for a file in the img/
-  folder. If the file is missing, the striped placeholder stays visible.
-
-  TO ADD an image:
-    Drop a file into img/ using the exact filename listed in img/README.txt.
-    The image will appear automatically — no code change needed.
-
-  TO CHANGE an image:
-    • Either replace the file in img/ keeping the same name,
-    • Or find the <img src="img/FILENAME.jpg"> line for that card and update
-      the filename.
-
-  Recommended formats: .jpg or .webp — ideally 16:9 ratio for best fit.
-================================================================================
-
-  HOW TO ADD A PROJECT
-================================================================================
-  1. Find any existing   <div class="card">...</div>   block in the HTML.
-     Copy the entire block (from <div class="card"> to its closing </div>).
-
-  2. Paste it below or above the block you copied.
-     Change: the title in <span class="pname">, the date/tools in <div class="meta">,
-     the description in <p>, and the chip labels in <span class="chip">.
-
-  3. Change the ref number (e.g. B.05) in both <span class="ref"> and in the
-     <img src="img/YOUR-IMAGE.jpg"> — pick a new filename for your image.
-
-  4. Drop the matching image file into img/ — it appears automatically.
-
-  TIP: Use class="card wide" instead of class="card" to make a card span the
-  full width (best for landscape/panoramic images).
-================================================================================
--->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ronaldo Plamadeala — Production &amp; Design Engineer</title>
+<title>Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -225,7 +174,7 @@
   .viewport .multi{display:flex;width:100%;height:100%;gap:2px;background:var(--paper-2)}
   .viewport .multi img{flex:1;min-width:0;height:100%;display:block}
 
-  /* reveal */
+  /* ---- reveal ---- */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
   .rv.in{opacity:1;transform:none}
 
@@ -244,345 +193,210 @@
 <body>
 
 <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b><b></b><b></b><b></b></div>
+<div class="sheet" id="app"></div>
 
-<div class="sheet">
-
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="topbar rv">
-      <div class="lbl">Engineering Portfolio — <span>Rev. 2026.06</span></div>
-      <div class="lbl">Sheet 01 / 01</div>
-    </div>
-
-    <h1 class="hero-name rv">RONALDO<span class="l2">PLAMADEALA</span></h1>
-    <div class="hero-role rv">Production &amp; Design Engineer</div>
-    <div class="hero-tags rv">Aerospace methods <b>/</b> Additive manufacturing <b>/</b> Product design <b>/</b> Workflow automation</div>
-
-    <div class="titleblock rv">
-      <div class="cell">
-        <span class="lbl">Location</span>
-        <div class="val">Hedehusene, DK</div>
-      </div>
-      <div class="cell">
-        <span class="lbl">Status</span>
-        <div class="val acc">Available — Jun 2026</div>
-      </div>
-      <div class="cell">
-        <span class="lbl">Languages</span>
-        <div class="val" style="font-size:13px;font-weight:600">FR · RO native · EN C1 · PT B2 · ES B1</div>
-      </div>
-      <div class="cell">
-        <span class="lbl">Contact</span>
-        <div class="val"><a href="mailto:ronaldoplamadeala@gmail.com">Email</a></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ================= PROFILE ================= -->
-  <div class="dim rv"><span class="num">00</span><span class="ttl">Profile</span><span class="ln"></span></div>
-  <div class="intro">
-    <div class="lbl rv">Junior — Class of 2025<br>BTS CPRP · Erasmus+ DK</div>
-    <p class="rv">Junior engineer with hands-on experience across <span class="hl">aerospace machining methods</span>, additive manufacturing (FDM + pellet extrusion), parametric CAD, and AI-assisted workflow automation. I build things that work — from aerospace fixtures to production tooling and internal apps — and I learn fast in small, high-ownership teams. Currently finishing an Erasmus+ placement in Denmark; seeking a full-time role in <span class="hl">production, design, or industrial methods</span>.</p>
-  </div>
-
-  <!-- ================= EXPERIENCE ================= -->
-  <div class="dim rv"><span class="num">01</span><span class="ttl">Experience</span><span class="ln"></span></div>
-  <div class="exp rv">
-    <div class="job">
-      <div class="co">Strategic Sales International ApS</div>
-      <div class="meta">PRODUCT DESIGN &amp; MFG · ERASMUS+ · ROSKILDE, DK · 2026</div>
-      <ul>
-        <li>Operate 3 industrial 3D printers (pellet FGF + FDM filament)</li>
-        <li>Design mechanical parts &amp; production tooling in FreeCAD / Fusion 360</li>
-        <li>Manage full print workflow: slicing, calibration, dimensional QC</li>
-        <li>Build internal production tools &amp; automation (Apps Script, Python)</li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="co">STAERO <span style="font-family:var(--mono);font-size:11px;color:var(--blueprint);letter-spacing:.05em">· EN 9100 / ISO 9001</span></div>
-      <div class="meta">METHODS TECHNICIAN · ALTERNANCE · BAYONNE, FR · 2024–25</div>
-      <ul>
-        <li>3D models &amp; assemblies in TopSolid 7 for aerospace components</li>
-        <li>Machining routes &amp; operation sequences (milling / turning)</li>
-        <li>3D dimensional control, CMM inspection, drawing revision</li>
-        <li>Clients: Dassault Aviation, Thales, Safran</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ================= WORK · AEROSPACE ================= -->
-  <div class="dim rv"><span class="num">A</span><span class="ttl">Aerospace &amp; Precision Machining</span><span class="ln"></span></div>
-  <div class="grid">
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/shim-kit.jpg" alt="Shim Kit Production Optimization"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>A.01</b>IMG — shim families / TopSolid model</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Shim Kit Production Optimization</span><span class="ref">A.01</span></div>
-        <div class="meta">TOPSOLID 7.17 · HELIOS ERP · EXCEL · 2024</div>
-        <p>Redesigned shim-kit production management. Modelled 258+ shim variants, organised them into 9 classification families, and built structured .STP data packs for subcontractors. Created an automated Excel system for inventory and sheet-cut optimization.</p>
-        <div class="res"><span class="chip acc">258+ variants · 9 families</span><span class="chip">Zero-rework handoffs</span><span class="chip">Waste minimised</span></div>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/fixture.png" alt="Point Fixe Servo — Drilling Fixture"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>A.02</b>IMG — drilling fixture / setup</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Point Fixe Servo — Drilling Fixture</span><span class="ref">A.02</span></div>
-        <div class="meta">TOPSOLID · MANUAL DRILL · Ø8 BUSHINGS · 2024–25</div>
-        <p>Designed a cost-optimised manual drilling fixture for an aerospace bracket — 10 precision drillings within ±0.1 mm. CNC was uneconomical for a non-recurring 10-piece run, so I built a modular fixture with a 2-position clamping strategy and 180° part rotation.</p>
-        <div class="res"><span class="chip acc">All 10 holes ±0.1 mm</span><span class="chip">Cost-optimised vs CNC</span></div>
-      </div>
-    </div>
-
-    <div class="card wide rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/interface-volant.jpg" alt="Interface Volant — Multi-Axis Machining Study"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>A.03</b>IMG — FAO toolpath / CNC simulation</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Interface Volant — Multi-Axis Machining Study</span><span class="ref">A.03</span></div>
-        <div class="meta">TOPSOLID 7.16 FAO/CAM · DOOSAN · MAZAK INTEGREX 35 &amp; 50 · CMM · 2025</div>
-        <p>Full process-engineering study for the Interface Volant. Defined a 5-phase manufacturing process, programmed FAO toolpaths, and ran a process-improvement study identifying tooling changes that cut cycle time significantly. Produced a complete production schedule and cost analysis for a 900-piece batch.</p>
-        <div class="res"><span class="chip acc">−40% cycle time · 15:09 → 09:08</span><span class="chip">~15 h saved / 62 h run</span><span class="chip">900-piece batch costed</span></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ================= WORK · ADDITIVE & DESIGN ================= -->
-  <div class="dim rv"><span class="num">B</span><span class="ttl">Additive Manufacturing &amp; Product Design</span><span class="ln"></span></div>
-  <div class="grid">
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/vase.jpg" alt="Organic Vase Series"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>B.01</b>IMG — fluted vase render / print</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Organic Vase Series — Published</span><span class="ref">B.01</span></div>
-        <div class="meta">BLENDER · FREECAD · ORCASLICER · CULTS3D · 2026</div>
-        <p>Designed an organic fluted vase, modelled in Blender (vase mode) and printed in transparent PLA. Published and listed for sale on Cults3D — my first end-to-end product, designed, manufactured and sold. Followed by a wider design exploration: hourglass forms, multi-lobe silhouettes, helical textures across 4+ physical iterations.</p>
-        <div class="res"><span class="chip acc">First commercial listing</span><span class="chip">4+ iterations</span></div>
-        <p class="note">↳ Live: cults3d.com/en/users/Ronaldo3D &nbsp;(REPLACE with your profile link)</p>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/robot-arm.png" alt="6-Axis Robotic Arm — CAD Study"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>B.02</b>IMG — 6-axis arm / Fusion assembly</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">6-Axis Robotic Arm — CAD Study</span><span class="ref">B.02</span></div>
-        <div class="meta">AUTODESK FUSION 360 · KINEMATICS · 2026</div>
-        <p>Designed and articulated a 6-axis industrial robotic arm in Fusion 360 — rotating base, main arm, forearm and two-finger gripper. Modelled each part to be functional and assemblable, and defined the kinematics and degrees of freedom of every joint, inspired by real industrial arms.</p>
-        <div class="res"><span class="chip">6 DOF modelled</span><span class="chip">Print-ready next phase</span></div>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/pladevogn.jpg" alt="Pladevogn Plug — Production Run"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>B.03</b>IMG — plug part / production run</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Pladevogn Plug — Production Run</span><span class="ref">B.03</span></div>
-        <div class="meta">FREECAD · ORCASLICER · ENDER 5 S1 · 2025</div>
-        <p>Designed a custom structural plug for the Pladevogn assembly from dimensional constraints in FreeCAD. Validated in ABS on a pellet printer, then run in series on filament — generating and validating production G-code for a dual-plug layout.</p>
-        <div class="res"><span class="chip acc">Series production</span><span class="chip">Settings validated</span></div>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/calibration.png" alt="Pellet Printer Calibration"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>B.04</b>IMG — calibration test matrix</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Pellet Printer Calibration</span><span class="ref">B.04</span></div>
-        <div class="meta">PIOCREAT G5 ULTRA &amp; G5 PRO · PLA / PETG · 2026</div>
-        <p>Developed systematic calibration protocols for two pellet extruders. G5 Ultra (PLA): 3×3 test matrix across temperature and Z-height. G5 Pro (PETG): cross-shaped layout over 5 temperature steps with a 65 °C / 8 h drying protocol. Locked baseline parameters integrated into the production workflow.</p>
-        <div class="res"><span class="chip acc">Locked baselines</span><span class="chip">Drying protocol in prod</span></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ================= WORK · TOOLS & AUTOMATION ================= -->
-  <div class="dim rv"><span class="num">C</span><span class="ttl">Production Tools &amp; Automation</span><span class="ln"></span></div>
-  <div class="grid">
-
-    <div class="card wide rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/tracker.png" alt="3D Print Management System"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>C.01</b>IMG — dashboard / Google Sheets system</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">3D Print Management System</span><span class="ref">C.01</span></div>
-        <div class="meta">GOOGLE SHEETS · APPS SCRIPT · JAVASCRIPT · 2026</div>
-        <p>Built a complete production tracking &amp; management system. Reactive onEdit triggers update data in real time; dynamic dropdowns drive material &amp; machine selection; automatic per-print cost tracking feeds three production dashboards. A separate Apps Script handles G-code import and the price catalogue to avoid code conflicts.</p>
-        <div class="res"><span class="chip acc">Real-time cost tracking</span><span class="chip">3 live dashboards</span><span class="chip">G-code import</span></div>
-        <p class="note">↳ Built using AI-assisted development.</p>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/silverhand.png" alt="V Silverhand — AI Companion PWA"
-             style="object-fit:contain;max-width:45%"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>C.02</b>IMG — PWA screenshot</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">V Silverhand — AI Companion PWA</span><span class="ref">C.02</span></div>
-        <div class="meta">LLM API · SUPABASE · VERCEL · PWA · 2026</div>
-        <p>A personal AI assistant built as an installable PWA: persistent conversation memory, an editable personal-notes system for context, and in-chat PDF / image analysis. Integrates an LLM API into a full app with a real-time user database and continuous deployment on Vercel — each code change ships live automatically.</p>
-        <div class="res"><span class="chip acc">Deployed · CI/CD</span><span class="chip">LLM + DB integration</span></div>
-        <p class="note">↳ Built using AI-assisted development.</p>
-      </div>
-    </div>
-
-    <div class="card rv">
-      <div class="viewport">
-        <span class="vt"></span><span class="vt"></span><span class="vt"></span><span class="vt"></span>
-        <img src="img/automation.png" alt="Internal Workflow Automation"
-             style="object-fit:contain"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="ph" style="display:none"><b>C.03</b>IMG — workflow / automation diagram</span>
-      </div>
-      <div class="body">
-        <div class="head"><span class="pname">Internal Workflow Automation</span><span class="ref">C.03</span></div>
-        <div class="meta">GOOGLE APPS SCRIPT · MAKE · 2026</div>
-        <p>Designed internal automations to remove repetitive work: scripted tooling, structured production workflows, and an automatic weekly report of the best-performing prints delivered every Monday at 08:00. Lets functional tools ship far faster than conventional development would allow.</p>
-        <div class="res"><span class="chip acc">Auto weekly reporting</span><span class="chip">Faster delivery</span></div>
-        <p class="note">↳ Built using AI-assisted development.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ================= CAPABILITIES ================= -->
-  <div class="dim rv"><span class="num">02</span><span class="ttl">Capabilities</span><span class="ln"></span></div>
-  <div class="caps rv">
-    <div class="col">
-      <h4>CAD &amp; Design</h4>
-      <span>TopSolid 7.17</span><span>FreeCAD (Part Design)</span><span>Autodesk Fusion 360</span><span>Blender</span><span>Parametric modelling</span><span>Technical drawings</span>
-    </div>
-    <div class="col">
-      <h4>Manufacturing Methods</h4>
-      <span>Process planning</span><span>FAO / CAM programming</span><span>Milling &amp; turning</span><span>Jig &amp; fixture design</span><span>CMM / MMT inspection</span><span>Aerospace tolerances</span>
-    </div>
-    <div class="col">
-      <h4>Additive</h4>
-      <span>FDM filament</span><span>Pellet extrusion (FGF)</span><span>Printer calibration</span><span>OrcaSlicer</span><span>Dimensional QC</span><span>Materials: PLA/PETG/ABS/TPU</span>
-    </div>
-    <div class="col">
-      <h4>Tools &amp; Automation</h4>
-      <span>HELIOS ERP</span><span>Excel (advanced)</span><span>Google Sheets + Apps Script</span><span>Python</span><span>AI-assisted development</span><span>Cost analysis</span>
-    </div>
-  </div>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="rv">
-    <div class="ftgrid">
-      <div class="c">
-        <span class="lbl">Drawn by</span>
-        <div class="big">R. PLAMADEALA</div>
-        <div class="v" style="margin-top:6px;color:var(--ink-soft);font-weight:500">Production &amp; Design Engineer</div>
-      </div>
-      <div class="c">
-        <span class="lbl">Email</span>
-        <div class="v"><a href="mailto:ronaldoplamadeala@gmail.com">ronaldoplamadeala@<br>gmail.com</a></div>
-      </div>
-      <div class="c">
-        <span class="lbl">Links</span>
-        <div class="v"><a href="https://cults3d.com/en/users/Ronaldo3D">Cults3D</a><br><a href="#">GitHub →</a><br><a href="#">LinkedIn →</a></div>
-      </div>
-      <div class="c">
-        <span class="lbl">Sheet</span>
-        <div class="big" style="color:var(--accent)">01/01</div>
-        <div class="v" style="margin-top:6px;color:var(--ink-soft);font-weight:500;font-family:var(--mono);font-size:11px">REV 2026.06</div>
-      </div>
-    </div>
-  </footer>
-
-</div>
-
+<script src="content.js"></script>
 <script>
-  const io=new IntersectionObserver((es)=>{
-    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+(function(){
+  /* ---- tiny HTML escaper for text values ---- */
+  function esc(s){
+    return String(s||'')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ---- set page title ---- */
+  document.title = siteInfo.name + ' — ' + siteInfo.role;
+
+  /* ---- dimension divider ---- */
+  function dim(num, label){
+    return '<div class="dim rv"><span class="num">'+num+'</span>'
+          +'<span class="ttl">'+esc(label)+'</span><span class="ln"></span></div>';
+  }
+
+  /* ---- viewport (image area of a card) ---- */
+  const VT = '<span class="vt"></span><span class="vt"></span>'
+           + '<span class="vt"></span><span class="vt"></span>';
+
+  function viewport(p){
+    var imgs = p.images || [];
+    var ref  = p.ref;
+
+    if(!imgs.length){
+      return '<div class="viewport">'+VT
+            +'<span class="ph"><b>'+ref+'</b>IMG &mdash; add image to content.js</span>'
+            +'</div>';
+    }
+
+    if(imgs.length === 1){
+      var img = imgs[0];
+      var fit = img.fit || 'cover';
+      var extra = img.mobile ? ';max-width:45%' : '';
+      return '<div class="viewport">'+VT
+            +'<img src="'+esc(img.src)+'" alt="'+esc(p.title)+'"'
+            +' style="object-fit:'+fit+extra+'"'
+            +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'">'
+            +'<span class="ph" style="display:none"><b>'+ref+'</b>IMG &mdash; '+esc(img.caption||'')+'</span>'
+            +'</div>';
+    }
+
+    /* multi-image */
+    var imgTags = imgs.map(function(img){
+      return '<img src="'+esc(img.src)+'" alt="'+esc(p.title)+'"'
+            +' style="object-fit:'+(img.fit||'cover')+'">';
+    }).join('');
+    return '<div class="viewport">'+VT+'<div class="multi">'+imgTags+'</div></div>';
+  }
+
+  /* ---- project card ---- */
+  function card(p){
+    var cls = 'card'+(p.wide?' wide':'')+' rv';
+
+    var chips = (p.results||[]).map(function(r,i){
+      var acc = (i===0 && p.firstChipAccent!==false);
+      return '<span class="chip'+(acc?' acc':'')+'">'+esc(r)+'</span>';
+    }).join('');
+
+    var notes = '';
+    if(p.link){
+      var display = p.link.replace(/^https?:\/\//,'');
+      notes += '<p class="note">↳ Live: <a href="'+esc(p.link)+'" target="_blank" rel="noopener">'+esc(display)+'</a></p>';
+    }
+    if(p.note) notes += '<p class="note">↳ '+esc(p.note)+'</p>';
+
+    return '<div class="'+cls+'">'
+          +viewport(p)
+          +'<div class="body">'
+          +'<div class="head"><span class="pname">'+esc(p.title)+'</span><span class="ref">'+p.ref+'</span></div>'
+          +'<div class="meta">'+esc(p.tags)+'</div>'
+          +'<p>'+esc(p.summary)+'</p>'
+          +'<div class="res">'+chips+'</div>'
+          +notes
+          +'</div>'
+          +'</div>';
+  }
+
+  /* ---- header ---- */
+  function renderHeader(){
+    var n = siteInfo.name.split(' ');
+    var tagline = esc(siteInfo.tagline).replace(/ \/ /g,' <b>/</b> ');
+    return '<header>'
+          +'<div class="topbar rv">'
+          +'<div class="lbl">Engineering Portfolio &mdash; <span>Rev. '+esc(siteInfo.rev)+'</span></div>'
+          +'<div class="lbl">Sheet 01 / 01</div>'
+          +'</div>'
+          +'<h1 class="hero-name rv">'+esc(n[0])+'<span class="l2">'+esc(n.slice(1).join(' '))+'</span></h1>'
+          +'<div class="hero-role rv">'+esc(siteInfo.role)+'</div>'
+          +'<div class="hero-tags rv">'+tagline+'</div>'
+          +'<div class="titleblock rv">'
+          +'<div class="cell"><span class="lbl">Location</span><div class="val">'+esc(siteInfo.location)+'</div></div>'
+          +'<div class="cell"><span class="lbl">Status</span><div class="val acc">'+esc(siteInfo.status)+'</div></div>'
+          +'<div class="cell"><span class="lbl">Languages</span><div class="val" style="font-size:13px;font-weight:600">'+esc(siteInfo.languages)+'</div></div>'
+          +'<div class="cell"><span class="lbl">Contact</span><div class="val"><a href="mailto:'+esc(siteInfo.email)+'">Email</a></div></div>'
+          +'</div>'
+          +'</header>';
+  }
+
+  /* ---- profile ---- */
+  function renderProfile(){
+    return dim('00','Profile')
+          +'<div class="intro">'
+          +'<div class="lbl rv">'+(siteInfo.subtitle||'')+'</div>'
+          +'<p class="rv">'+(siteInfo.profile||'')+'</p>'
+          +'</div>';
+  }
+
+  /* ---- experience ---- */
+  function renderExperience(){
+    var jobs = experience.map(function(job){
+      var badge = job.badge
+        ? ' <span style="font-family:var(--mono);font-size:11px;color:var(--blueprint);letter-spacing:.05em">'+esc(job.badge)+'</span>'
+        : '';
+      var pts = (job.points||[]).map(function(pt){ return '<li>'+esc(pt)+'</li>'; }).join('');
+      return '<div class="job">'
+            +'<div class="co">'+esc(job.company)+badge+'</div>'
+            +'<div class="meta">'+esc(job.meta)+'</div>'
+            +'<ul>'+pts+'</ul>'
+            +'</div>';
+    }).join('');
+    return dim('01','Experience')+'<div class="exp rv">'+jobs+'</div>';
+  }
+
+  /* ---- projects (grouped by section) ---- */
+  function renderProjects(){
+    return Object.keys(sections).map(function(letter){
+      var label = sections[letter];
+      var ps    = projects.filter(function(p){ return p.section===letter; });
+      if(!ps.length) return '';
+      return dim(letter, label)
+            +'<div class="grid">'+ps.map(card).join('')+'</div>';
+    }).join('');
+  }
+
+  /* ---- capabilities ---- */
+  function renderCapabilities(){
+    var cols = capabilities.map(function(cap){
+      var items = cap.items.map(function(i){ return '<span>'+esc(i)+'</span>'; }).join('');
+      return '<div class="col"><h4>'+esc(cap.title)+'</h4>'+items+'</div>';
+    }).join('');
+    return dim('02','Capabilities')+'<div class="caps rv">'+cols+'</div>';
+  }
+
+  /* ---- footer ---- */
+  function renderFooter(){
+    var ln = siteInfo.links || {};
+    var ep = siteInfo.email.split('@');
+    var lks = [];
+    if(ln.cults3d)  lks.push('<a href="'+esc(ln.cults3d)+'"  target="_blank" rel="noopener">Cults3D</a>');
+    if(ln.github)   lks.push('<a href="'+esc(ln.github)+'"   target="_blank" rel="noopener">GitHub &rarr;</a>');
+    if(ln.linkedin) lks.push('<a href="'+esc(ln.linkedin)+'" target="_blank" rel="noopener">LinkedIn &rarr;</a>');
+
+    var np  = siteInfo.name.toUpperCase().split(' ');
+    var big = np[0][0]+'. '+np.slice(1).join(' ');
+
+    return '<footer class="rv">'
+          +'<div class="ftgrid">'
+          +'<div class="c"><span class="lbl">Drawn by</span>'
+          +'<div class="big">'+big+'</div>'
+          +'<div class="v" style="margin-top:6px;color:var(--ink-soft);font-weight:500">'+esc(siteInfo.role)+'</div></div>'
+          +'<div class="c"><span class="lbl">Email</span>'
+          +'<div class="v"><a href="mailto:'+esc(siteInfo.email)+'">'+esc(ep[0])+'@<br>'+esc(ep[1])+'</a></div></div>'
+          +'<div class="c"><span class="lbl">Links</span>'
+          +'<div class="v">'+lks.join('<br>')+'</div></div>'
+          +'<div class="c"><span class="lbl">Sheet</span>'
+          +'<div class="big" style="color:var(--accent)">01/01</div>'
+          +'<div class="v" style="margin-top:6px;color:var(--ink-soft);font-weight:500;font-family:var(--mono);font-size:11px">REV '+esc(siteInfo.rev)+'</div></div>'
+          +'</div></footer>';
+  }
+
+  /* ---- build & inject ---- */
+  document.getElementById('app').innerHTML =
+    renderHeader() +
+    renderProfile() +
+    renderExperience() +
+    renderProjects() +
+    renderCapabilities() +
+    renderFooter();
+
+  /* ---- reveal animation ---- */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rv').forEach((el,i)=>{
-    el.style.transitionDelay=(Math.min(i,6)*0.05)+'s';
+
+  document.querySelectorAll('.rv').forEach(function(el,i){
+    el.style.transitionDelay = (Math.min(i,6)*0.05)+'s';
     io.observe(el);
   });
-  // header reveals immediately on load
-  window.addEventListener('load',()=>{
-    document.querySelectorAll('header .rv, .intro .rv').forEach((el,i)=>{
-      setTimeout(()=>el.classList.add('in'), 80+i*90);
-    });
 
-    // ---- multi-image support ----
-    // Drop  name-2.ext / name-3.ext in img/ → they appear automatically beside name.ext
-    function probeImg(src){
-      return new Promise(r=>{const i=new Image();i.onload=()=>r(true);i.onerror=()=>r(false);i.src=src;});
-    }
-    async function setupMulti(img){
-      // skip if primary failed to load (placeholder is already showing)
-      if(!img.complete||!img.naturalWidth)return;
-      const src=img.getAttribute('src');
-      const m=src.match(/^(.*?)(\.[^.]+)$/);
-      if(!m)return;
-      const[,base,ext]=m;
-      const extras=[];
-      for(let n=2;n<=3;n++){
-        const s=`${base}-${n}${ext}`;
-        if(await probeImg(s))extras.push(s);
-      }
-      if(!extras.length)return;
-      const fit=img.style.objectFit||'cover';
-      const ph=img.nextElementSibling;
-      const wrap=document.createElement('div');
-      wrap.className='multi';
-      [src,...extras].forEach(s=>{
-        const el=document.createElement('img');
-        el.src=s;el.alt=img.alt;el.style.objectFit=fit;
-        wrap.appendChild(el);
-      });
-      img.replaceWith(wrap);
-      if(ph&&ph.classList.contains('ph'))ph.remove();
-    }
-    document.querySelectorAll('.viewport>img').forEach(setupMulti);
+  window.addEventListener('load',function(){
+    document.querySelectorAll('header .rv, .intro .rv').forEach(function(el,i){
+      setTimeout(function(){ el.classList.add('in'); }, 80+i*90);
+    });
   });
+
+})();
 </script>
 </body>
 </html>

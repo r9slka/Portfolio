@@ -1,12 +1,13 @@
-IMAGE FILES — DROP HERE TO MAKE THEM APPEAR ON THE PORTFOLIO
-=============================================================
+IMAGE FILES — DROP HERE, THEN REFERENCE IN content.js
+======================================================
 
-Each filename below maps to exactly one project card.
-Drop the file here with the exact name shown — the image will appear automatically.
-Recommended format: .jpg or .webp, 16:9 ratio.
+Images are managed in  content.js  (the project's `images` array).
+Dropping a file here does nothing on its own — you also need to add
+a line to the project in content.js. See the instructions at the top
+of that file.
 
-FILE                    → PROJECT
------------------------------------------------
+CURRENT FILE → PROJECT MAPPING
+------------------------------------------------
 shim-kit.jpg            → A.01  Shim Kit Production Optimization
 fixture.png             → A.02  Point Fixe Servo — Drilling Fixture
 interface-volant.jpg    → A.03  Interface Volant — Multi-Axis Machining Study
@@ -18,25 +19,29 @@ tracker.png             → C.01  3D Print Management System
 silverhand.png          → C.02  V Silverhand — AI Companion PWA
 automation.png          → C.03  Internal Workflow Automation
 
-NOTE: If a file is missing, the styled placeholder text stays visible.
-      No code change needed — just drop the right file in this folder.
+TO ADD A NEW IMAGE
+------------------
+1. Drop the file in this folder (any name, .jpg / .png / .webp).
+2. Open content.js, find the project, add a line to its images array:
+      { src: "img/yourfile.jpg", caption: "What it shows", fit: "cover" }
+3. Save content.js, git push → Vercel redeploys automatically.
 
+TO ADD MULTIPLE IMAGES TO ONE PROJECT
+--------------------------------------
+Just add more objects to the project's images array in content.js:
+    images: [
+      { src: "img/vase.jpg",   caption: "Front view",   fit: "cover" },
+      { src: "img/vase-2.jpg", caption: "Side view",    fit: "cover" },
+      { src: "img/vase-3.jpg", caption: "Detail shot",  fit: "cover" }
+    ]
+They appear side by side in the card viewport, equal width.
 
-ADDING A SECOND OR THIRD IMAGE TO A PROJECT
-============================================
-Each project supports up to 3 images displayed side by side inside the card.
-The naming rule is simple: add a -2 or -3 suffix before the extension.
-
-  Example for the Vase project:
-    vase.jpg        ← first image  (already shown)
-    vase-2.jpg      ← second image (drop here → appears automatically)
-    vase-3.jpg      ← third image  (optional)
-
-  Works for every project:
-    shim-kit-2.jpg, fixture-2.png, pladevogn-2.jpg, tracker-2.png … etc.
-
-  Rules:
-  - The suffix and extension must match exactly (same extension as the primary).
-  - Images are displayed in order: primary, -2, -3 — equal width, same height.
-  - If a variant file is missing it is simply skipped (no gap, no error).
-  - No code change needed — just drop the file and reload the page.
+FIT OPTIONS
+-----------
+  fit: "cover"                → fills the frame, crops edges
+                                 use for photos of real objects
+  fit: "contain"              → shows the whole image, no crop
+                                 use for CAD renders, screenshots,
+                                 technical drawings, spreadsheets
+  fit: "contain", mobile:true → centred phone mockup
+                                 use for portrait/vertical screenshots
