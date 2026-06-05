@@ -221,6 +221,10 @@
   .ftgrid .c .v{font-family:var(--disp);font-weight:600;font-size:15px}
   .ftgrid .c a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--accent)}
 
+  /* ---- multi-image viewport ---- */
+  .viewport .multi{display:flex;width:100%;height:100%;gap:2px;background:var(--paper-2)}
+  .viewport .multi img{flex:1;min-width:0;height:100%;display:block}
+
   /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
   .rv.in{opacity:1;transform:none}
@@ -546,6 +550,38 @@
     document.querySelectorAll('header .rv, .intro .rv').forEach((el,i)=>{
       setTimeout(()=>el.classList.add('in'), 80+i*90);
     });
+
+    // ---- multi-image support ----
+    // Drop  name-2.ext / name-3.ext in img/ → they appear automatically beside name.ext
+    function probeImg(src){
+      return new Promise(r=>{const i=new Image();i.onload=()=>r(true);i.onerror=()=>r(false);i.src=src;});
+    }
+    async function setupMulti(img){
+      // skip if primary failed to load (placeholder is already showing)
+      if(!img.complete||!img.naturalWidth)return;
+      const src=img.getAttribute('src');
+      const m=src.match(/^(.*?)(\.[^.]+)$/);
+      if(!m)return;
+      const[,base,ext]=m;
+      const extras=[];
+      for(let n=2;n<=3;n++){
+        const s=`${base}-${n}${ext}`;
+        if(await probeImg(s))extras.push(s);
+      }
+      if(!extras.length)return;
+      const fit=img.style.objectFit||'cover';
+      const ph=img.nextElementSibling;
+      const wrap=document.createElement('div');
+      wrap.className='multi';
+      [src,...extras].forEach(s=>{
+        const el=document.createElement('img');
+        el.src=s;el.alt=img.alt;el.style.objectFit=fit;
+        wrap.appendChild(el);
+      });
+      img.replaceWith(wrap);
+      if(ph&&ph.classList.contains('ph'))ph.remove();
+    }
+    document.querySelectorAll('.viewport>img').forEach(setupMulti);
   });
 </script>
 </body>
