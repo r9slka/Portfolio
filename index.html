@@ -204,9 +204,16 @@
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
+  /* sections are NOT stored in content.json (CMS would strip unknown keys).
+     They are hardcoded here — edit this if you rename a section. */
+  var sections = {
+    A: 'Aerospace & Precision Machining',
+    B: 'Additive Manufacturing & Product Design',
+    C: 'Production Tools & Automation'
+  };
+
   function init(data){
     var siteInfo    = data.siteInfo    || {};
-    var sections    = data.sections    || {};
     var experience  = data.experience  || [];
     var projects    = data.projects    || [];
     var capabilities= data.capabilities|| [];
