@@ -11,15 +11,8 @@
     "rev": "2026.06",
     "profile": "Junior engineer with hands-on experience across <span class=\"hl\">aerospace machining methods</span>, additive manufacturing (FDM + pellet extrusion), parametric CAD, and AI-assisted workflow automation. I build things that work — from aerospace fixtures to production tooling and internal apps — and I learn fast in small, high-ownership teams. Currently finishing an Erasmus+ placement in Denmark; seeking a full-time role in <span class=\"hl\">production, design, or industrial methods</span>.",
     "links": {
-      "cults3d": "https://cults3d.com/en/users/Ronaldo3D",
-      "github": "",
-      "linkedin": ""
+      "cults3d": "https://cults3d.com/en/users/Ronaldo3D"
     }
-  },
-  "sections": {
-    "A": "Aerospace & Precision Machining",
-    "B": "Additive Manufacturing & Product Design",
-    "C": "Production Tools & Automation"
   },
   "experience": [
     {
@@ -52,9 +45,19 @@
       "title": "Shim Kit Production Optimization",
       "tags": "TopSolid 7.17 · HELIOS ERP · Excel · 2024",
       "summary": "Redesigned shim-kit production management. Modelled 258+ shim variants, organised them into 9 classification families, and built structured .STP data packs for subcontractors. Created an automated Excel system for inventory and sheet-cut optimization.",
-      "results": ["258+ variants · 9 families", "Zero-rework handoffs", "Waste minimised"],
+      "results": [
+        "258+ variants · 9 families",
+        "Zero-rework handoffs",
+        "Waste minimised"
+      ],
+      "wide": false,
       "images": [
-        { "src": "img/shim-kit.jpg", "caption": "Shim families — TopSolid model", "fit": "contain" }
+        {
+          "src": "img/shim-kit.jpg",
+          "caption": "Shim families — TopSolid model",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
@@ -64,22 +67,40 @@
       "title": "Point Fixe Servo — Drilling Fixture",
       "tags": "TopSolid · Manual drill · Ø8 bushings · 2024–25",
       "summary": "Designed a cost-optimised manual drilling fixture for an aerospace bracket — 10 precision drillings within ±0.1 mm. CNC was uneconomical for a non-recurring 10-piece run, so I built a modular fixture with a 2-position clamping strategy and 180° part rotation.",
-      "results": ["All 10 holes ±0.1 mm", "Cost-optimised vs CNC"],
+      "results": [
+        "All 10 holes ±0.1 mm",
+        "Cost-optimised vs CNC"
+      ],
+      "wide": false,
       "images": [
-        { "src": "img/fixture.png", "caption": "Fixture — CAD assembly", "fit": "contain" }
+        {
+          "src": "img/fixture.png",
+          "caption": "Fixture — CAD assembly",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
       "id": "interface-volant",
       "ref": "A.03",
       "section": "A",
-      "wide": true,
       "title": "Interface Volant — Multi-Axis Machining Study",
       "tags": "TopSolid 7.16 FAO/CAM · DOOSAN · MAZAK INTEGREX 35 & 50 · CMM · 2025",
       "summary": "Full process-engineering study for the Interface Volant. Defined a 5-phase manufacturing process, programmed FAO toolpaths, and ran a process-improvement study identifying tooling changes that cut cycle time significantly. Produced a complete production schedule and cost analysis for a 900-piece batch.",
-      "results": ["-40% cycle time · 15:09 → 09:08", "~15 h saved / 62 h run", "900-piece batch costed"],
+      "results": [
+        "-40% cycle time · 15:09 → 09:08",
+        "~15 h saved / 62 h run",
+        "900-piece batch costed"
+      ],
+      "wide": true,
       "images": [
-        { "src": "img/interface-volant.jpg", "caption": "FAO toolpath / CNC simulation", "fit": "contain" }
+        {
+          "src": "img/interface-volant.jpg",
+          "caption": "FAO toolpath / CNC simulation",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
@@ -89,23 +110,40 @@
       "title": "Organic Vase Series — Published",
       "tags": "Blender · FreeCAD · OrcaSlicer · Cults3D · 2026",
       "summary": "Designed an organic fluted vase, modelled in Blender (vase mode) and printed in transparent PLA. Published and listed for sale on Cults3D — my first end-to-end product, designed, manufactured and sold. Followed by a wider design exploration: hourglass forms, multi-lobe silhouettes, helical textures across 4+ physical iterations.",
-      "results": ["First commercial listing", "4+ iterations"],
+      "results": [
+        "First commercial listing",
+        "4+ iterations"
+      ],
+      "wide": false,
       "link": "https://cults3d.com/en/users/Ronaldo3D",
       "images": [
-        { "src": "img/vase.jpg", "caption": "Fluted vase — transparent PLA", "fit": "contain" }
+        {
+          "src": "img/vase.jpg",
+          "caption": "Fluted vase — transparent PLA",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
       "id": "robot-arm",
       "ref": "B.02",
       "section": "B",
-      "firstChipAccent": false,
       "title": "6-Axis Robotic Arm — CAD Study",
       "tags": "Autodesk Fusion 360 · Kinematics · 2026",
       "summary": "Designed and articulated a 6-axis industrial robotic arm in Fusion 360 — rotating base, main arm, forearm and two-finger gripper. Modelled each part to be functional and assemblable, and defined the kinematics and degrees of freedom of every joint, inspired by real industrial arms.",
-      "results": ["6 DOF modelled", "Print-ready next phase"],
+      "results": [
+        "6 DOF modelled",
+        "Print-ready next phase"
+      ],
+      "wide": false,
       "images": [
-        { "src": "img/robot-arm.png", "caption": "6-axis arm / Fusion assembly", "fit": "contain" }
+        {
+          "src": "img/robot-arm.png",
+          "caption": "6-axis arm / Fusion assembly",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
@@ -115,9 +153,18 @@
       "title": "Pladevogn Plug — Production Run",
       "tags": "FreeCAD · OrcaSlicer · Ender 5 S1 · 2025",
       "summary": "Designed a custom structural plug for the Pladevogn assembly from dimensional constraints in FreeCAD. Validated in ABS on a pellet printer, then run in series on filament — generating and validating production G-code for a dual-plug layout.",
-      "results": ["Series production", "Settings validated"],
+      "results": [
+        "Series production",
+        "Settings validated"
+      ],
+      "wide": false,
       "images": [
-        { "src": "img/pladevogn.jpg", "caption": "Plug — production part", "fit": "cover" }
+        {
+          "src": "img/calibration.png",
+          "caption": "Plug — production part",
+          "fit": "cover",
+          "mobile": false
+        }
       ]
     },
     {
@@ -127,23 +174,41 @@
       "title": "Pellet Printer Calibration",
       "tags": "Piocreat G5 Ultra & G5 Pro · PLA / PETG · 2026",
       "summary": "Developed systematic calibration protocols for two pellet extruders. G5 Ultra (PLA): 3×3 test matrix across temperature and Z-height. G5 Pro (PETG): cross-shaped layout over 5 temperature steps with a 65 °C / 8 h drying protocol. Locked baseline parameters integrated into the production workflow.",
-      "results": ["Locked baselines", "Drying protocol in prod"],
+      "results": [
+        "Locked baselines",
+        "Drying protocol in prod"
+      ],
+      "wide": false,
       "images": [
-        { "src": "img/calibration.png", "caption": "Calibration test matrix", "fit": "contain" }
+        {
+          "src": "img/calibration.png",
+          "caption": "Calibration test matrix",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
       "id": "tracker",
       "ref": "C.01",
       "section": "C",
-      "wide": true,
       "title": "3D Print Management System",
       "tags": "Google Sheets · Apps Script · JavaScript · 2026",
       "summary": "Built a complete production tracking & management system. Reactive onEdit triggers update data in real time; dynamic dropdowns drive material & machine selection; automatic per-print cost tracking feeds three production dashboards. A separate Apps Script handles G-code import and the price catalogue to avoid code conflicts.",
-      "results": ["Real-time cost tracking", "3 live dashboards", "G-code import"],
+      "results": [
+        "Real-time cost tracking",
+        "3 live dashboards",
+        "G-code import"
+      ],
+      "wide": true,
       "note": "Built using AI-assisted development.",
       "images": [
-        { "src": "img/tracker.png", "caption": "Dashboard / Google Sheets system", "fit": "contain" }
+        {
+          "src": "img/tracker.png",
+          "caption": "Dashboard / Google Sheets system",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     },
     {
@@ -153,10 +218,19 @@
       "title": "V Silverhand — AI Companion PWA",
       "tags": "LLM API · Supabase · Vercel · PWA · 2026",
       "summary": "A personal AI assistant built as an installable PWA: persistent conversation memory, an editable personal-notes system for context, and in-chat PDF / image analysis. Integrates an LLM API into a full app with a real-time user database and continuous deployment on Vercel — each code change ships live automatically.",
-      "results": ["Deployed · CI/CD", "LLM + DB integration"],
+      "results": [
+        "Deployed · CI/CD",
+        "LLM + DB integration"
+      ],
+      "wide": false,
       "note": "Built using AI-assisted development.",
       "images": [
-        { "src": "img/silverhand.png", "caption": "PWA screenshot", "fit": "contain", "mobile": true }
+        {
+          "src": "img/silverhand.png",
+          "caption": "PWA screenshot",
+          "fit": "contain",
+          "mobile": true
+        }
       ]
     },
     {
@@ -166,29 +240,66 @@
       "title": "Internal Workflow Automation",
       "tags": "Google Apps Script · Make · 2026",
       "summary": "Designed internal automations to remove repetitive work: scripted tooling, structured production workflows, and an automatic weekly report of the best-performing prints delivered every Monday at 08:00. Lets functional tools ship far faster than conventional development would allow.",
-      "results": ["Auto weekly reporting", "Faster delivery"],
+      "results": [
+        "Auto weekly reporting",
+        "Faster delivery"
+      ],
+      "wide": false,
       "note": "Built using AI-assisted development.",
       "images": [
-        { "src": "img/automation.png", "caption": "Workflow / automation diagram", "fit": "contain" }
+        {
+          "src": "img/automation.png",
+          "caption": "Workflow / automation diagram",
+          "fit": "contain",
+          "mobile": false
+        }
       ]
     }
   ],
   "capabilities": [
     {
       "title": "CAD & Design",
-      "items": ["TopSolid 7.17", "FreeCAD (Part Design)", "Autodesk Fusion 360", "Blender", "Parametric modelling", "Technical drawings"]
+      "items": [
+        "TopSolid 7.17",
+        "FreeCAD (Part Design)",
+        "Autodesk Fusion 360",
+        "Blender",
+        "Parametric modelling",
+        "Technical drawings"
+      ]
     },
     {
       "title": "Manufacturing Methods",
-      "items": ["Process planning", "FAO / CAM programming", "Milling & turning", "Jig & fixture design", "CMM / MMT inspection", "Aerospace tolerances"]
+      "items": [
+        "Process planning",
+        "FAO / CAM programming",
+        "Milling & turning",
+        "Jig & fixture design",
+        "CMM / MMT inspection",
+        "Aerospace tolerances"
+      ]
     },
     {
       "title": "Additive",
-      "items": ["FDM filament", "Pellet extrusion (FGF)", "Printer calibration", "OrcaSlicer", "Dimensional QC", "Materials: PLA/PETG/ABS/TPU"]
+      "items": [
+        "FDM filament",
+        "Pellet extrusion (FGF)",
+        "Printer calibration",
+        "OrcaSlicer",
+        "Dimensional QC",
+        "Materials: PLA/PETG/ABS/TPU"
+      ]
     },
     {
       "title": "Tools & Automation",
-      "items": ["HELIOS ERP", "Excel (advanced)", "Google Sheets + Apps Script", "Python", "AI-assisted development", "Cost analysis"]
+      "items": [
+        "HELIOS ERP",
+        "Excel (advanced)",
+        "Google Sheets + Apps Script",
+        "Python",
+        "AI-assisted development",
+        "Cost analysis"
+      ]
     }
   ]
 }
