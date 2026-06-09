@@ -1,0 +1,164 @@
+media:
+  input: img
+  output: img
+
+content:
+  - name: portfolio
+    label: Portfolio Content
+    type: file
+    path: content.json
+    fields:
+
+      # ── Site-wide info ──────────────────────────────────────────────────────
+      - name: siteInfo
+        label: Site Info
+        type: object
+        fields:
+          - name: name
+            label: Full Name
+            type: string
+          - name: role
+            label: Role / Title
+            type: string
+          - name: tagline
+            label: Tagline (slash-separated)
+            type: string
+          - name: subtitle
+            label: Hero Subtitle (HTML allowed)
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: status
+            label: Availability Status
+            type: string
+          - name: email
+            label: Email Address
+            type: string
+          - name: languages
+            label: Languages
+            type: string
+          - name: rev
+            label: Revision (e.g. 2026.06)
+            type: string
+          - name: profile
+            label: Profile Text (HTML spans allowed)
+            type: text
+          - name: links
+            label: Social Links
+            type: object
+            fields:
+              - name: cults3d
+                label: Cults3D URL
+                type: string
+              - name: github
+                label: GitHub URL
+                type: string
+              - name: linkedin
+                label: LinkedIn URL
+                type: string
+
+      # ── Experience ──────────────────────────────────────────────────────────
+      - name: experience
+        label: Experience
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.company}"
+        fields:
+          - name: company
+            label: Company Name
+            type: string
+          - name: badge
+            label: Badge (optional, e.g. · ISO 9001)
+            type: string
+          - name: meta
+            label: Meta (role · type · location · year)
+            type: string
+          - name: points
+            label: Bullet Points
+            type: string
+            list: true
+
+      # ── Projects ────────────────────────────────────────────────────────────
+      - name: projects
+        label: Projects
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.ref} — {fields.title}"
+        fields:
+          - name: id
+            label: ID (lowercase, no spaces)
+            type: string
+          - name: ref
+            label: Ref (e.g. A.01)
+            type: string
+          - name: section
+            label: Section
+            type: select
+            options:
+              values: [A, B, C]
+          - name: title
+            label: Title
+            type: string
+          - name: tags
+            label: Tags / Tools (displayed as meta line)
+            type: string
+          - name: summary
+            label: Summary
+            type: text
+          - name: results
+            label: Result Chips
+            type: string
+            list: true
+          - name: wide
+            label: Wide card (full width)
+            type: boolean
+          - name: link
+            label: Live URL (optional)
+            type: string
+          - name: note
+            label: Note (optional, e.g. AI-assisted)
+            type: string
+          - name: images
+            label: Images
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.caption}"
+            fields:
+              - name: src
+                label: Image File
+                type: image
+              - name: caption
+                label: Caption
+                type: string
+              - name: fit
+                label: Fit
+                type: select
+                options:
+                  values: [cover, contain]
+              - name: mobile
+                label: Mobile mockup (portrait, centred)
+                type: boolean
+
+      # ── Capabilities ────────────────────────────────────────────────────────
+      - name: capabilities
+        label: Capabilities
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: title
+            label: Column Title
+            type: string
+          - name: items
+            label: Skills
+            type: string
+            list: true
