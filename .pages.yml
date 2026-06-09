@@ -134,6 +134,8 @@ content:
               - name: src
                 label: Image File
                 type: image
+                options:
+                  categories: [image]
               - name: caption
                 label: Caption
                 type: string
