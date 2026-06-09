@@ -108,7 +108,13 @@ content:
             label: Tags / Tools (displayed as meta line)
             type: string
           - name: summary
-            label: Summary
+            label: Summary (short — shown on card)
+            type: text
+          - name: context
+            label: Context (detail page — why / background)
+            type: text
+          - name: process
+            label: Process (detail page — how you did it)
             type: text
           - name: results
             label: Result Chips
@@ -117,6 +123,9 @@ content:
           - name: wide
             label: Wide card (full width)
             type: boolean
+          - name: tools
+            label: Tools (detail page — comma-separated)
+            type: string
           - name: link
             label: Live URL (optional)
             type: string
