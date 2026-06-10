@@ -61,6 +61,48 @@
           "caption": "Shim families — TopSolid model",
           "fit": "contain",
           "mobile": false
+        },
+        {
+          "src": "img/pln cales.png",
+          "caption": "Technical Blueprint and Engineering Drawing of a shim",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/IMG_2621.jpg",
+          "caption": "Shim - Face milling",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Excel papa etc.jpg",
+          "caption": "Parent-Child BOM (Bill of Materials) Structure and Dimensions Breakdown",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/A-1.png",
+          "caption": "Automated Data Analysis using COUNTIF and COUNTIFS Formulas",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/b.png",
+          "caption": "Material Optimization and Sheet Metal Cutting Plan Calculator",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/excel nbre famille longueur prix.jpg",
+          "caption": "Cross-Reference Matrix for Component Families, Lengths, and Cost Analysis",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/C.png",
+          "caption": "Master Technical Database for Kit Components and Unit Pricing",
+          "fit": "contain",
+          "mobile": false
         }
       ],
       "comparison": [
