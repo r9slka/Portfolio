@@ -44,12 +44,16 @@
       "section": "A",
       "title": "Shim Kit Production Optimization",
       "tags": "TopSolid 7.17 · HELIOS ERP · Excel · 2024",
-      "summary": "Redesigned shim-kit production management. Modelled 258+ shim variants, organised them into 9 classification families, and built structured .STP data packs for subcontractors. Created an automated Excel system for inventory and sheet-cut optimization.",
+      "summary": "Rebuilt shim-kit production at an aerospace subcontractor — 258+ parametric variants, 9 families, automated inventory and cutting optimisation.",
+      "context": "At STAERO, shim-kit production was slow and error-prone. Each shim was modelled individually (heavy time loss), there was no classification (long search and grouping), stock was managed manually (human errors), sheet cutting wasn't optimised (heavy material waste), there was no defined structure for subcontractor handoffs, and the HELIOS routings were out of date.",
+      "process": "I rebuilt the workflow end to end. I created parametric models in TopSolid 7.17 where changing the radius and thickness generates a new shim automatically, and classified 258+ variants into 9 families (A–I) by radius and thickness. I built an automated Excel system (NB.SI / NB.SI.ENS formulas) for inventory, annual cost tracking and real-time stock, plus a cutting algorithm that computes how many strips fit and cuts from the largest to the smallest shim (0.8 mm error margin) to minimise waste. I packaged the parts into structured .STP data packs grouped by family for subcontractors, and updated the HELIOS routings (notes, phases, prices) for full traceability. In parallel I delivered three side improvements: a custom foam case for the pre-setting bench, a reorganised tooling rack and OF archive, and a co-designed automated honing sheet with the shop operator.",
       "results": [
-        "258+ variants · 9 families",
-        "Zero-rework handoffs",
-        "Waste minimised"
+        "258+ variants modelled, 9 families",
+        "Stock search & picking errors eliminated",
+        "Cutting waste minimised (0.8 mm margin)",
+        "Zero-rework subcontractor handoffs"
       ],
+      "tools": "TopSolid 7.17, HELIOS ERP, Microsoft Excel",
       "wide": false,
       "images": [
         {
@@ -64,13 +68,17 @@
       "id": "fixture",
       "ref": "A.02",
       "section": "A",
-      "title": "Point Fixe Servo — Drilling Fixture",
+      "title": "Point Fixe Servo — Manual Drilling Fixture",
       "tags": "TopSolid · Manual drill · Ø8 bushings · 2024–25",
-      "summary": "Designed a cost-optimised manual drilling fixture for an aerospace bracket — 10 precision drillings within ±0.1 mm. CNC was uneconomical for a non-recurring 10-piece run, so I built a modular fixture with a 2-position clamping strategy and 180° part rotation.",
+      "summary": "A cost-optimised manual drilling fixture for an aerospace bracket — 10 drillings within ±0.1 mm, 100% compliant.",
+      "context": "An aerospace bracket needed 10 precision drillings on its fins in two steps maximum (6×Ø2.5, 2×Ø3.2, 1×Ø4.5, 1×Ø5). Direct machining was impossible with the shop's standard tools, and an initial single-clamp setup caused instability — the Ø3.2 and Ø2.5 holes came out non-compliant. CNC was uneconomical for a non-recurring 10-piece run.",
+      "process": "I designed a dedicated manual drilling fixture: base, two drill jigs (HP3 and HP33), Ø8 centering screws and two clamping flanges. The process is split into two indexed positions with a 180° part rotation — Position 1 (HP3): 4×Ø2.5 + 2×Ø3.2 + 1×Ø5; Position 2 (HP33): 2×Ø2.5 + 1×Ø4.5. Adding the second clamp stabilised the part completely and made it fully compliant.",
       "results": [
-        "All 10 holes ±0.1 mm",
+        "All 10 drillings within ±0.1 mm across the batch",
+        "100% compliant parts",
         "Cost-optimised vs CNC"
       ],
+      "tools": "TopSolid, manual drill press, HP3 & HP33 jigs, Ø8 centering screws, dual clamping",
       "wide": false,
       "images": [
         {
@@ -86,13 +94,18 @@
       "ref": "A.03",
       "section": "A",
       "title": "Interface Volant — Multi-Axis Machining Study",
-      "tags": "TopSolid 7.16 FAO/CAM · DOOSAN · MAZAK INTEGREX 35 & 50 · CMM · 2025",
-      "summary": "Full process-engineering study for the Interface Volant. Defined a 5-phase manufacturing process, programmed FAO toolpaths, and ran a process-improvement study identifying tooling changes that cut cycle time significantly. Produced a complete production schedule and cost analysis for a 900-piece batch.",
+      "tags": "School project · BTS CPRP · TopSolid 7.16 FAO/CAM · DOOSAN · MAZAK · 2025",
+      "summary": "Process-engineering school study that cut cycle time 40% on a 900-piece aluminium part through tooling and routing optimisation.",
+      "context": "A full process-engineering school study for the Interface Volant in aluminium EN AW-2024, to be produced as a 900-piece batch under tight tolerances (0.02 mm cylindricity on the Ø40 H7 bore). The initial routing was fragmented — sawing, two 3-axis milling phases, then milling on a vertical indexer — generating excess handling and geometric-dispersion risk, with slow conventional tools and a 15:09 cycle.",
+      "process": "I re-centred the entire process onto a DOOSAN CNC lathe with live tooling, grouping the full machining into Phase 20 (only the reference-C roughing kept in Phase 30). I replaced the slow conventional tools with a solid-carbide end mill (helical Ø30 drilling + contouring) and two step drills combining centering and drilling for the Ø5.5 and Ø3.2 holes. Helical drilling dropped from 5:42 to 2:14 and contouring from 3:04 to 1:46.",
       "results": [
-        "-40% cycle time · 15:09 → 09:08",
-        "~15 h saved / 62 h run",
-        "900-piece batch costed"
+        "Cycle time −40% (15:09 → 09:08), 6:01 saved per part",
+        "~15 h saved on a 62 h production (~24%)",
+        "Tooling investment €226.54, profitable over 900 pieces",
+        "Production cost €16.66/part; sale price €46.53 incl. tax"
       ],
+      "tools": "TopSolid 7.16 (FAO/CAM), DOOSAN CNC, MAZAK INTEGREX 35 & 50, MMT/CMM",
+      "note": "School project (BTS CPRP) — not production work.",
       "wide": true,
       "images": [
         {
@@ -104,18 +117,48 @@
       ]
     },
     {
+      "id": "transport-crate",
+      "ref": "A.04",
+      "section": "A",
+      "title": "Aero Longeron Transport Crate — Reverse Engineering",
+      "tags": "TopSolid 7 · HELIOS · Reverse engineering · STAERO · 2024–25",
+      "summary": "Reverse-engineered and improved a 4.62 m aeronautical longeron transport crate from photos only — taken from concept to physical fabrication.",
+      "context": "I had to design a wooden transport crate for aeronautical longerons (4620 × 1050 × 50 mm) with no existing plans or technical documents — only a few photos of the old model. The goal wasn't to copy it but to improve it: a stronger structure, better protection against shocks, humidity, dust and transport stress, a strict structural-robustness requirement from the client, and proper water drainage on the floor.",
+      "process": "I analysed the photos to understand the existing systems and identify the weak points, then proposed improvements — validated internally but rejected by the client because they risked the crate's robustness. Through exchanges with the client and the manufacturer I built a second version reusing proven solutions from the old model and adding a water-drainage fix, then produced new plans. After a return-to-school break I picked the project back up and added an inclined floor to evacuate water, fully updated the plans, and sent them to the client and manufacturer for feasibility validation. The project taught me to present, defend and adapt my proposals across client and manufacturer feedback, and to treat design as iterative.",
+      "results": [
+        "Taken from concept to physical fabrication",
+        "Crate physically manufactured and delivered",
+        "Full plan set validated by client & manufacturer"
+      ],
+      "tools": "TopSolid 7, HELIOS ERP",
+      "wide": false,
+      "images": [
+        {
+          "src": "img/transport-crate.jpg",
+          "caption": "Aero Longeron Transport Crate — Reverse Engineering",
+          "fit": "contain",
+          "mobile": false
+        }
+      ]
+    },
+    {
       "id": "vase",
       "ref": "B.01",
       "section": "B",
       "title": "Organic Vase Series — Published",
       "tags": "Blender · FreeCAD · OrcaSlicer · Cults3D · 2026",
-      "summary": "Designed an organic fluted vase, modelled in Blender (vase mode) and printed in transparent PLA. Published and listed for sale on Cults3D — my first end-to-end product, designed, manufactured and sold. Followed by a wider design exploration: hourglass forms, multi-lobe silhouettes, helical textures across 4+ physical iterations.",
+      "summary": "Designed, manufactured and sold an organic vase end-to-end — my first commercial product — then explored a wider series.",
+      "context": "I wanted to take a product all the way — design, manufacture and sell — entirely on my own, and to understand why early prints failed and how to fix them.",
+      "process": "I modelled an organic fluted vase in Blender (vase mode) and printed it in transparent PLA on a Creality Ender 5 S1, then published and listed it on Cults3D under the profile Ronaldo3D — my first end-to-end product. I extended it into a wider design exploration: hourglass forms, multi-lobe silhouettes with vertical turbulence, and helical textures, across 4+ physical iterations. The core learning was diagnosing why prints failed and identifying the fixes — those improvements are understood; current priorities are elsewhere.",
       "results": [
-        "First commercial listing",
-        "4+ iterations"
+        "First commercial product listed on Cults3D",
+        "Organic Fluted Vase (free): 995 views, 6 likes, 5 comments",
+        "Honeycomb Organic Vase (€0.50): 85 views, 1 like",
+        "4+ physical iterations"
       ],
-      "wide": false,
+      "tools": "Blender, FreeCAD, OrcaSlicer, Ender 5 S1, Cults3D",
       "link": "https://cults3d.com/en/users/Ronaldo3D",
+      "wide": false,
       "images": [
         {
           "src": "img/vase.jpg",
@@ -131,11 +174,15 @@
       "section": "B",
       "title": "6-Axis Robotic Arm — CAD Study",
       "tags": "Autodesk Fusion 360 · Kinematics · 2026",
-      "summary": "Designed and articulated a 6-axis industrial robotic arm in Fusion 360 — rotating base, main arm, forearm and two-finger gripper. Modelled each part to be functional and assemblable, and defined the kinematics and degrees of freedom of every joint, inspired by real industrial arms.",
+      "summary": "Designed and articulated a modular 6-axis arm in Fusion 360, defining the kinematics of every joint.",
+      "context": "A self-driven CAD project to deepen my mechanical-design and kinematics skills, aimed at an arm that could pick objects in an automated-manufacturing context.",
+      "process": "In Fusion 360 I designed a modular-scale 6-axis arm — 9 parts total, 7 modelled — with a rotating base, main arm, forearm and two-finger gripper, defining the kinematics and degrees of freedom of every joint, inspired by real industrial arms. This is a CAD study; the physical build (printing + servo/ESP32 electronics) is a future step.",
       "results": [
-        "6 DOF modelled",
-        "Print-ready next phase"
+        "6 DOF defined across all joints",
+        "9 parts total (7 modelled)",
+        "Print-ready decomposition planned"
       ],
+      "tools": "Autodesk Fusion 360",
       "wide": false,
       "images": [
         {
@@ -152,11 +199,15 @@
       "section": "B",
       "title": "Pladevogn Plug — Production Run",
       "tags": "FreeCAD · OrcaSlicer · Ender 5 S1 · 2025",
-      "summary": "Designed a custom structural plug for the Pladevogn assembly from dimensional constraints in FreeCAD. Validated in ABS on a pellet printer, then run in series on filament — generating and validating production G-code for a dual-plug layout.",
+      "summary": "A custom structural plug modelled from constraints, validated in ABS, then run as a 40-piece series on filament.",
+      "context": "A partner needed a custom structural plug for the Pladevogn assembly, produced reliably in series and strong enough in PLA on a filament printer — so the design had to suit that material and machine.",
+      "process": "I modelled the plug in FreeCAD from the support's dimensional constraints, validated it in ABS on a pellet printer, then ran 40 pieces in series on filament, generating and validating production G-code for a dual-plug layout.",
       "results": [
-        "Series production",
-        "Settings validated"
+        "40-piece series produced",
+        "Design tuned for PLA / filament strength",
+        "Production G-code validated"
       ],
+      "tools": "FreeCAD, OrcaSlicer, Piocreat G5 Ultra, Creality Ender 5 S1",
       "wide": false,
       "images": [
         {
@@ -173,11 +224,14 @@
       "section": "B",
       "title": "Pellet Printer Calibration",
       "tags": "Piocreat G5 Ultra & G5 Pro · PLA / PETG · 2026",
-      "summary": "Developed systematic calibration protocols for two pellet extruders. G5 Ultra (PLA): 3×3 test matrix across temperature and Z-height. G5 Pro (PETG): cross-shaped layout over 5 temperature steps with a 65 °C / 8 h drying protocol. Locked baseline parameters integrated into the production workflow.",
+      "summary": "Systematic calibration protocols for two pellet extruders, locking stable production baselines.",
+      "context": "The two pellet printers had no reliable baseline parameters, so production prints were inconsistent.",
+      "process": "I developed systematic calibration protocols for both extruders. G5 Ultra (1.2 mm nozzle, PLA): a 3×3 test matrix across temperature and Z-height. G5 Pro (2.0 mm nozzle, PETG): a cross-shaped layout across 5 temperature steps, plus a 65 °C / 8 h pellet-drying protocol. Locked baselines were integrated into the production workflow.",
       "results": [
-        "Locked baselines",
-        "Drying protocol in prod"
+        "Locked baseline parameters for both machines",
+        "PETG drying protocol (65 °C / 8 h) in production"
       ],
+      "tools": "OrcaSlicer, Piocreat G5 Ultra & G5 Pro, PLA/PETG pellets",
       "wide": false,
       "images": [
         {
@@ -189,19 +243,47 @@
       ]
     },
     {
+      "id": "bag-handle",
+      "ref": "B.05",
+      "section": "B",
+      "title": "Market Bag Handle — Ergonomic Product Design",
+      "tags": "FreeCAD · Blender · OrcaSlicer · 2025",
+      "summary": "An ergonomic market-bag handle that taught me to combine human-touch surface finish, printability and organic modelling.",
+      "context": "Design an ergonomic handle for a market bag, using organic fillet geometry for both comfort and structural strength.",
+      "process": "I modelled the organic form in FreeCAD and printed a PLA prototype on an Ender 5 S1 to test the grip; the next planned step is a TPU version for more flex. The real value was learning to bake technical constraints into a small part that must also be printable (DFM) and have a surface finish pleasant to human touch — and it sharpened my organic-modelling skills in FreeCAD, which is hard to master.",
+      "results": [
+        "Functional prototype produced",
+        "Design validated for comfort & durability",
+        "Built organic-modelling skill in FreeCAD"
+      ],
+      "tools": "FreeCAD, Blender, OrcaSlicer, Creality Ender 5 S1",
+      "wide": false,
+      "images": [
+        {
+          "src": "img/bag-handle.jpg",
+          "caption": "Market Bag Handle — Ergonomic Product Design",
+          "fit": "contain",
+          "mobile": false
+        }
+      ]
+    },
+    {
       "id": "tracker",
       "ref": "C.01",
       "section": "C",
       "title": "3D Print Management System",
       "tags": "Google Sheets · Apps Script · JavaScript · 2026",
-      "summary": "Built a complete production tracking & management system. Reactive onEdit triggers update data in real time; dynamic dropdowns drive material & machine selection; automatic per-print cost tracking feeds three production dashboards. A separate Apps Script handles G-code import and the price catalogue to avoid code conflicts.",
+      "summary": "A complete production tracker — real-time cost tracking, dynamic menus and three live dashboards.",
+      "context": "3D printing at SSI ran blind — no real-time notion of cost, so there was no way to know whether a given print made or lost money.",
+      "process": "I built a complete production tracking system in Google Sheets with Apps Script. Reactive onEdit triggers update data live, dynamic dropdowns drive material and machine selection, and automatic per-print cost tracking feeds three production dashboards. A separate Apps Script handles G-code import and the price catalogue to avoid conflicts.",
       "results": [
-        "Real-time cost tracking",
-        "3 live dashboards",
-        "G-code import"
+        "Full per-print cost traceability",
+        "Visibility on gain/loss per print",
+        "Cost forecasting for future prototypes before launch"
       ],
-      "wide": true,
+      "tools": "Google Sheets, Google Apps Script, JavaScript",
       "note": "Built using AI-assisted development.",
+      "wide": true,
       "images": [
         {
           "src": "img/tracker.png",
@@ -217,13 +299,17 @@
       "section": "C",
       "title": "V Silverhand — AI Companion PWA",
       "tags": "LLM API · Supabase · Vercel · PWA · 2026",
-      "summary": "A personal AI assistant built as an installable PWA: persistent conversation memory, an editable personal-notes system for context, and in-chat PDF / image analysis. Integrates an LLM API into a full app with a real-time user database and continuous deployment on Vercel — each code change ships live automatically.",
+      "summary": "An installable personal AI assistant with persistent memory, editable context and in-chat file analysis.",
+      "context": "I wanted a personal AI assistant without consumer-app limits — and the satisfaction of building it myself and understanding the whole system end to end.",
+      "process": "I built an installable PWA with persistent conversation memory, an editable personal-notes system for context, and in-chat PDF/image analysis. It integrates an LLM API into a full app with a real-time database and continuous deployment on Vercel.",
       "results": [
-        "Deployed · CI/CD",
-        "LLM + DB integration"
+        "Deployed PWA with CI/CD",
+        "LLM API + real-time database integration",
+        "Whole system understood end-to-end"
       ],
-      "wide": false,
+      "tools": "HTML/CSS/JS, Supabase, Vercel, GitHub",
       "note": "Built using AI-assisted development.",
+      "wide": false,
       "images": [
         {
           "src": "img/silverhand.png",
@@ -239,17 +325,73 @@
       "section": "C",
       "title": "Internal Workflow Automation",
       "tags": "Google Apps Script · Make · 2026",
-      "summary": "Designed internal automations to remove repetitive work: scripted tooling, structured production workflows, and an automatic weekly report of the best-performing prints delivered every Monday at 08:00. Lets functional tools ship far faster than conventional development would allow.",
+      "summary": "Internal automations that remove repetitive work, including an automatic weekly print-performance report.",
+      "context": "Repetitive production tasks and reporting were eating time at SSI.",
+      "process": "I designed internal automations — scripted tooling, structured production workflows, and an automatic weekly report of the best-performing prints delivered every Monday at 08:00.",
       "results": [
-        "Auto weekly reporting",
-        "Faster delivery"
+        "Automatic weekly performance reporting",
+        "Repetitive tasks removed"
       ],
-      "wide": false,
+      "tools": "Google Apps Script, Make",
       "note": "Built using AI-assisted development.",
+      "wide": false,
       "images": [
         {
           "src": "img/automation.png",
           "caption": "Workflow / automation diagram",
+          "fit": "contain",
+          "mobile": false
+        }
+      ]
+    },
+    {
+      "id": "quote-system",
+      "ref": "C.04",
+      "section": "C",
+      "title": "Local AI Quote-Generation System",
+      "tags": "n8n · Ollama · Docker · Tailscale · 2026",
+      "summary": "An autonomous, fully local AI agent that turns a request form into a client quote behind a human approval gate — no cloud, no data leaving the network.",
+      "context": "Quote drafting was a manual, repetitive task on every client request. Cloud AI tools impose token quotas and rate limits, and pricing tables plus client data must never leave the local network. Built for a Danish SME in technical consulting and additive manufacturing.",
+      "process": "I built a self-hosted AI agent on a private two-node setup linked by a Tailscale mesh VPN (no public port). A GPU host (Windows 11, RTX 4060, 32 GB) runs every service in Docker — Ollama (llama3.1:8b), n8n, Open WebUI, Qdrant. The pipeline: a request-form webhook → fetch current pricing from Google Drive → deterministic prompt build → constrained JSON generation by the local model → parse into a branded email → a mandatory human approval gate (Approve/Hold links) → wait-and-branch → SMTP dispatch to the client only on approval. Each engineering trade-off was deliberate: deterministic pricing injection instead of semantic RAG (removes numeric hallucination risk with an 8B model), calling the inference /api/generate endpoint directly (the chat-UI API failed under orchestration), SMTP + app password over brittle OAuth, n8n pinned to v1.94.1 (newer builds crash on this WSL2 host), and lean system prompts to keep the small model accurate.",
+      "results": [
+        "Functional end-to-end: form to approval to dispatch",
+        "Full workflow validated in a successful test run",
+        "Deterministic pricing — no numeric hallucination",
+        "Private: no data leaves the network"
+      ],
+      "tools": "Ollama, n8n, Open WebUI, Qdrant, Docker, Tailscale",
+      "note": "Self-hosted system, built using AI-assisted development.",
+      "wide": false,
+      "images": [
+        {
+          "src": "img/quote-system.jpg",
+          "caption": "Local AI Quote-Generation System",
+          "fit": "contain",
+          "mobile": false
+        }
+      ]
+    },
+    {
+      "id": "ai-server",
+      "ref": "C.05",
+      "section": "C",
+      "title": "Self-Hosted Private AI Server",
+      "tags": "Windows · Docker/WSL2 · RTX 4060 · Tailscale · 2026",
+      "summary": "A desktop engineered into an always-on, remotely operated private AI server — local inference, zero cloud, recovers on its own after a reboot.",
+      "context": "I wanted private AI infrastructure with no token quotas, no recurring cost, reachable remotely from anywhere — the foundation the quote-generation agent runs on.",
+      "process": "I turned a consumer desktop (Windows 11, RTX 4060, 32 GB) into a headless, always-on server. For reliability I disabled sleep/hibernate/NIC power-down, enabled auto-login, added a boot startup script, disabled Windows-Update auto-restart, and set every container to --restart always. For access I set up a Tailscale mesh VPN (encrypted, no public port) plus remote desktop. The AI runtime is Ollama (models on a dedicated SSD via OLLAMA_MODELS, bound to 0.0.0.0 for VPN access, three models: llama3.1:8b, mistral:7b, phi3:medium) with Docker on WSL2 hosting Open WebUI (GPU passthrough, ~2 s responses) and n8n. Services are reachable only inside the VPN: Open WebUI :3000, n8n :5678, Ollama API :11434.",
+      "results": [
+        "Always-on, remotely operable as if local",
+        "Auto-recovers after reboot or power loss",
+        "Zero cloud dependency, zero recurring cost"
+      ],
+      "tools": "Windows 11, Docker/WSL2, Ollama, Tailscale, RTX 4060, Open WebUI, n8n",
+      "note": "Self-hosted infrastructure, built using AI-assisted development.",
+      "wide": false,
+      "images": [
+        {
+          "src": "img/ai-server.jpg",
+          "caption": "Self-Hosted Private AI Server",
           "fit": "contain",
           "mobile": false
         }

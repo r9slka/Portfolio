@@ -189,7 +189,8 @@
   .det-body{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
   .det-cell{background:var(--paper);padding:26px 28px}
   .det-cell .lbl{display:block;margin-bottom:12px}
-  .det-cell p{font-size:17px;line-height:1.6;color:var(--ink)}
+  .det-cell p,.det-p{font-size:17px;line-height:1.6;color:var(--ink)}
+  .det-p+.det-p{margin-top:.9em}
   .det-cell-full{grid-column:1 / -1}
 
   /* results row */
@@ -332,6 +333,14 @@
     return String(s||'')
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* convert plain text with \n\n paragraph breaks to HTML paragraphs */
+  function nl2p(s){
+    if(!s) return '';
+    return String(s).split(/\n\n+/).map(function(para){
+      return '<p class="det-p">'+esc(para.replace(/\n/g,' '))+'</p>';
+    }).join('');
   }
 
   /* sections hardcoded — CMS must NOT manage this key */
@@ -627,12 +636,12 @@
     var hasCtx = p.context && p.context.trim();
     var hasPrc = p.process && p.process.trim();
     if(hasCtx && hasPrc){
-      bodyRows += '<div class="det-cell rv"><span class="lbl">Context</span><p>'+esc(p.context)+'</p></div>'
-        +'<div class="det-cell rv"><span class="lbl">Process</span><p>'+esc(p.process)+'</p></div>';
+      bodyRows += '<div class="det-cell rv"><span class="lbl">Context</span>'+nl2p(p.context)+'</div>'
+        +'<div class="det-cell rv"><span class="lbl">Process</span>'+nl2p(p.process)+'</div>';
     } else if(hasCtx){
-      bodyRows += '<div class="det-cell det-cell-full rv"><span class="lbl">Context</span><p>'+esc(p.context)+'</p></div>';
+      bodyRows += '<div class="det-cell det-cell-full rv"><span class="lbl">Context</span>'+nl2p(p.context)+'</div>';
     } else if(hasPrc){
-      bodyRows += '<div class="det-cell det-cell-full rv"><span class="lbl">Process</span><p>'+esc(p.process)+'</p></div>';
+      bodyRows += '<div class="det-cell det-cell-full rv"><span class="lbl">Process</span>'+nl2p(p.process)+'</div>';
     }
 
     /* results */
