@@ -54,6 +54,14 @@
         "Zero-rework subcontractor handoffs"
       ],
       "tools": "TopSolid 7.17, HELIOS ERP, Microsoft Excel",
+      "comparison": [
+        { "criterion": "3D modelling",         "before": "Each shim modelled individually — heavy time loss",         "after": "Parametric models: change radius + thickness, new shim auto-generated" },
+        { "criterion": "Classification",        "before": "None — long search and grouping",                           "after": "9 families (A–I) by radius and thickness" },
+        { "criterion": "Data management",       "before": "Fully manual — human errors",                               "after": "Automated Excel (NB.SI / NB.SI.ENS): inventory, annual cost, live stock" },
+        { "criterion": "Material use",          "before": "Unoptimised sheet cutting — heavy waste",                   "after": "Cutting algorithm, largest to smallest, 0.8 mm margin" },
+        { "criterion": "Subcontractor handoff", "before": "No defined structure",                                      "after": "Structured .STP data packs grouped by family" },
+        { "criterion": "Shop traceability",     "before": "HELIOS routings out of date",                               "after": "Routings updated (notes, phases, prices)" }
+      ],
       "wide": false,
       "images": [
         {
@@ -79,6 +87,11 @@
         "Cost-optimised vs CNC"
       ],
       "tools": "TopSolid, manual drill press, HP3 & HP33 jigs, Ø8 centering screws, dual clamping",
+      "comparison": [
+        { "criterion": "Feasibility", "before": "Direct machining impossible with standard shop tools",           "after": "Full manual fixture: base, HP3 & HP33 jigs, Ø8 centering screws" },
+        { "criterion": "Precision",   "before": "Single clamp, instability — Ø3.2 and Ø2.5 holes non-compliant", "after": "2 clamps + 2 indexed positions, 180° rotation, 100% compliant" },
+        { "criterion": "Cost",        "before": "CNC uneconomical for a non-recurring 10-piece run",              "after": "Cost-optimised dedicated manual fixture" }
+      ],
       "wide": false,
       "images": [
         {
@@ -105,6 +118,13 @@
         "Production cost €16.66/part; sale price €46.53 incl. tax"
       ],
       "tools": "TopSolid 7.16 (FAO/CAM), DOOSAN CNC, MAZAK INTEGREX 35 & 50, MMT/CMM",
+      "comparison": [
+        { "criterion": "Routing",     "before": "Fragmented: sawing, 2× 3-axis milling, vertical indexer", "after": "Re-centred on DOOSAN CNC lathe, machining grouped in Phase 20" },
+        { "criterion": "Tooling",     "before": "Slow conventional tools (Ø16 steel mill, separate drills)", "after": "Solid-carbide end mill + 2 step drills (centering + drilling combined)" },
+        { "criterion": "Helical Ø30", "before": "5 min 42 s",                                               "after": "2 min 14 s" },
+        { "criterion": "Contouring",  "before": "3 min 04 s",                                               "after": "1 min 46 s" },
+        { "criterion": "Cycle time",  "before": "15 min 09 s",                                              "after": "9 min 08 s (−40%)" }
+      ],
       "note": "School project (BTS CPRP) — not production work.",
       "wide": true,
       "images": [
@@ -131,6 +151,12 @@
         "Full plan set validated by client & manufacturer"
       ],
       "tools": "TopSolid 7, HELIOS ERP",
+      "comparison": [
+        { "criterion": "Documentation",  "before": "No plans — only a few photos of the old model", "after": "Full updated technical plan set" },
+        { "criterion": "Structure",      "before": "Weak points identified on the old crate",       "after": "Reinforced while preserving the client's robustness requirement" },
+        { "criterion": "Water drainage", "before": "Water pooling on the floor",                    "after": "Inclined floor for water evacuation" },
+        { "criterion": "Outcome",        "before": "Ageing undocumented crate",                     "after": "Taken from concept to physical fabrication" }
+      ],
       "wide": false,
       "images": [
         {
@@ -282,6 +308,11 @@
         "Cost forecasting for future prototypes before launch"
       ],
       "tools": "Google Sheets, Google Apps Script, JavaScript",
+      "comparison": [
+        { "criterion": "Cost visibility", "before": "Printing ran blind — no real-time cost",     "after": "Automatic per-print cost tracking" },
+        { "criterion": "Profitability",   "before": "No way to know gain or loss per print",      "after": "Clear gain/loss visibility per print" },
+        { "criterion": "Planning",        "before": "No basis to estimate future prototypes",     "after": "Cost forecasting before launch" }
+      ],
       "note": "Built using AI-assisted development.",
       "wide": true,
       "images": [

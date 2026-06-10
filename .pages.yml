@@ -157,6 +157,24 @@ content:
                 label: Mobile mockup (portrait, centred)
                 type: boolean
 
+          - name: comparison
+            label: Before / After Table
+            type: object
+            list:
+              collapsible:
+                collapsed: false
+                summary: "{fields.criterion}"
+            fields:
+              - name: criterion
+                label: Criterion
+                type: string
+              - name: before
+                label: Before
+                type: string
+              - name: after
+                label: After
+                type: string
+
       # ── Capabilities ────────────────────────────────────────────────────────
       - name: capabilities
         label: Capabilities
