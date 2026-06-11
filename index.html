@@ -142,9 +142,8 @@
   .chip.acc{color:#fff;background:var(--accent);border-color:var(--accent)}
   .note{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--blueprint);margin-top:12px;font-style:normal}
 
-  /* ---- multi-image viewport (card) ---- */
-  .viewport .multi{display:flex;width:100%;height:100%;gap:2px;background:var(--paper-2)}
-  .viewport .multi img{flex:1;min-width:0;height:100%;display:block}
+  /* content-visibility: skip off-screen card rendering */
+  .card{content-visibility:auto;contain-intrinsic-size:0 380px}
 
   /* ---- capabilities ---- */
   .caps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -467,21 +466,15 @@
       return '<div class="viewport">'+VT
             +'<span class="ph"><b>'+p.ref+'</b>IMG — add via CMS</span></div>';
     }
-    if(imgs.length===1){
-      var img=imgs[0], fit=img.fit||'cover';
-      var extra=img.mobile?';max-width:45%':'';
-      return '<div class="viewport">'+VT
-            +'<img src="'+esc(img.src)+'" alt="'+esc(p.title)+'"'
-            +' style="object-fit:'+fit+extra+'"'
-            +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'">'
-            +'<span class="ph" style="display:none"><b>'+p.ref+'</b>'+esc(img.caption||'')+'</span>'
-            +'</div>';
-    }
-    var tags=imgs.map(function(img){
-      return '<img src="'+esc(img.src)+'" alt="'+esc(p.title)+'"'
-            +' style="object-fit:'+(img.fit||'cover')+'">';
-    }).join('');
-    return '<div class="viewport">'+VT+'<div class="multi">'+tags+'</div></div>';
+    var img=imgs[0], fit=img.fit||'cover';
+    var extra=img.mobile?';max-width:45%':'';
+    return '<div class="viewport">'+VT
+          +'<img src="'+esc(img.src)+'" alt="'+esc(p.title)+'"'
+          +' style="object-fit:'+fit+extra+'"'
+          +' loading="lazy" decoding="async"'
+          +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'">'
+          +'<span class="ph" style="display:none"><b>'+p.ref+'</b>'+esc(img.caption||'')+'</span>'
+          +'</div>';
   }
 
   /* ================================================================
@@ -605,6 +598,7 @@
           +'<span class="gal-vt"></span><span class="gal-vt"></span>'
           +'<span class="gal-vt"></span><span class="gal-vt"></span>'
           +'<img src="'+esc(img.src)+'" alt="'+esc(img.caption||title)+'"'
+          +' loading="lazy" decoding="async"'
           +' onerror="this.parentElement.style.background=\'var(--paper-2)\'">'
           +'</div>'
           +(img.caption

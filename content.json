@@ -527,7 +527,7 @@
       "tags": "n8n · Ollama · Docker · Tailscale · 2026",
       "summary": "An autonomous, fully local AI agent that turns a request form into a client quote behind a human approval gate — no cloud, no data leaving the network.",
       "context": "Quote drafting was a manual, repetitive task on every client request. Cloud AI tools impose token quotas and rate limits, and pricing tables plus client data must never leave the local network. Built for a Danish SME in technical consulting and additive manufacturing.",
-      "process": "I built a self-hosted AI agent on a private two-node setup linked by a Tailscale mesh VPN (no public port). A GPU host (Windows 11, RTX 4060, 32 GB) runs every service in Docker — Ollama (llama3.1:8b), n8n, Open WebUI, Qdrant. The pipeline: a request-form webhook → fetch current pricing from Google Drive → deterministic prompt build → constrained JSON generation by the local model → parse into a branded email → a mandatory human approval gate (Approve/Hold links) → wait-and-branch → SMTP dispatch to the client only on approval. Each engineering trade-off was deliberate: deterministic pricing injection instead of semantic RAG (removes numeric hallucination risk with an 8B model), calling the inference /api/generate endpoint directly (the chat-UI API failed under orchestration), SMTP + app password over brittle OAuth, n8n pinned to v1.94.1 (newer builds crash on this WSL2 host), and lean system prompts to keep the small model accurate.",
+      "process": "I built a self-hosted AI agent on a private two-node setup linked by a Tailscale mesh VPN (no public port). A GPU host (Windows 11, RTX 4060, 32 GB) runs every service in Docker — Ollama (llama3.1:8b), n8n, Open WebUI. The pipeline: a request-form webhook → fetch current pricing from Google Drive → deterministic prompt build → constrained JSON generation by the local model → parse into a branded email → a mandatory human approval gate (Approve/Hold links) → wait-and-branch → SMTP dispatch to the client only on approval. Each engineering trade-off was deliberate: deterministic pricing injection instead of semantic RAG (removes numeric hallucination risk with an 8B model), calling the inference /api/generate endpoint directly (the chat-UI API failed under orchestration), SMTP + app password over brittle OAuth, n8n pinned to v1.94.1 (newer builds crash on this WSL2 host), and lean system prompts to keep the small model accurate.",
       "results": [
         "Functional end-to-end: form to approval to dispatch",
         "Full workflow validated in a successful test run",
@@ -535,7 +535,7 @@
         "Private: no data leaves the network"
       ],
       "wide": false,
-      "tools": "Ollama, n8n, Open WebUI, Qdrant, Docker, Tailscale",
+      "tools": "Ollama, n8n, Open WebUI, Docker, Tailscale",
       "note": "Self-hosted system, built using AI-assisted development.",
       "images": [
         {
