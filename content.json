@@ -559,11 +559,6 @@
       "note": "Built using AI-assisted development.",
       "images": [
         {
-          "caption": "Dashboard / Google Sheets system",
-          "fit": "contain",
-          "mobile": false
-        },
-        {
           "src": "img/Capture d'écran 2026-06-11 102918.png",
           "caption": "Extruder Empirical Testing Log and Parameter Scoring Matrix",
           "fit": "contain",
