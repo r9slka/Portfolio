@@ -465,6 +465,12 @@
       "tools": "FreeCAD, OrcaSlicer, Piocreat G5 Ultra, Creality Ender 5 S1",
       "images": [
         {
+          "src": "img/Capture d'écran 2026-03-19 151309.png",
+          "caption": "Pladevogn_Plug",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
           "src": "img/Pladevogn_plug printing.jpg",
           "caption": "Plug — production part",
           "fit": "cover",
@@ -489,8 +495,38 @@
       "tools": "OrcaSlicer, Piocreat G5 Ultra & G5 Pro, PLA/PETG pellets",
       "images": [
         {
-          "src": "img/calibration.png",
-          "caption": "Calibration test matrix",
+          "src": "img/Capture d'écran 2026-05-01 092434.png",
+          "caption": "Calibration Cube",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 102918.png",
+          "caption": "Extruder Empirical Testing Log and Parameter Scoring Matrix",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103000.png",
+          "caption": "Live Calibration Dashboard and Material Performance Analytics",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103010.png",
+          "caption": "Global Price Settings and Machine Profile Configurations",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103053.png",
+          "caption": "Pre-Production Cost Estimator and Granular Expense Breakdown",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103112.png",
+          "caption": "Logged Production Estimates and Historical Project Ledger",
           "fit": "contain",
           "mobile": false
         }
