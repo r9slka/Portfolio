@@ -160,6 +160,11 @@
           "caption": "Fixture — CAD assembly",
           "fit": "contain",
           "mobile": false
+        },
+        {
+          "src": "img/POINT FIXE SERVO - FIS AJU POSITION 2-.jpg",
+          "caption": "Fixture — CAD assembly 2",
+          "mobile": false
         }
       ],
       "comparison": [
