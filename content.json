@@ -156,6 +156,30 @@
       "tools": "TopSolid, manual drill press, HP3 & HP33 jigs, Ø8 centering screws, dual clamping",
       "images": [
         {
+          "src": "img/IMG_3722-1.jpg",
+          "caption": "Fixed Servo Mount Bracket (Physical Component)",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/POINT FIXE SERVO -PL.jpg",
+          "caption": "Fixed Servo Mount Bracket (Blueprint)",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/IMG_3726.jpg",
+          "caption": "Two-Stage Dedicated Drilling Fixture for Part Alignment",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/HP3 FG311 07 0A CALIBRE DE PERCAGE -ASS POSITION.jpg",
+          "caption": "equential Drilling Fixture for Servo Bracket Manufacturing",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
           "src": "img/fixture.png",
           "caption": "Fixture — CAD assembly",
           "fit": "contain",
@@ -164,6 +188,7 @@
         {
           "src": "img/POINT FIXE SERVO - FIS AJU POSITION 2-.jpg",
           "caption": "Fixture — CAD assembly 2",
+          "fit": "contain",
           "mobile": false
         }
       ],
