@@ -391,8 +391,32 @@
       "link": "https://cults3d.com/en/users/Ronaldo3D",
       "images": [
         {
+          "src": "img/Vase lumina.jpeg",
+          "caption": "Organic Vase Yaz -- PLA",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 101558.png",
+          "caption": "Blender Organic Vase Yaz ",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 102254.png",
+          "caption": "Slicer Organic Vase Yaz ",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
           "src": "img/vase.jpg",
           "caption": "Fluted vase — transparent PLA",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/WhatsApp Image 2026-04-28 at 10.37.43.jpeg",
+          "caption": "Organic Vase Honey -- PLA",
           "fit": "contain",
           "mobile": false
         }
