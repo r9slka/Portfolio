@@ -550,7 +550,19 @@
       "tools": "FreeCAD, Blender, OrcaSlicer, Creality Ender 5 S1",
       "images": [
         {
-          "src": "img/bag-handle.jpg",
+          "src": "img/Capture d'écran 2026-06-11 111825.png",
+          "caption": "Market Bag Handle — Ergonomic Product Design",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 112047.png",
+          "caption": "Market Bag Handle — Ergonomic Product Design",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 112055.png",
           "caption": "Market Bag Handle — Ergonomic Product Design",
           "fit": "contain",
           "mobile": false
