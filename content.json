@@ -230,8 +230,50 @@
       "note": "School project (BTS CPRP) — not production work.",
       "images": [
         {
-          "src": "img/interface-volant.jpg",
-          "caption": "FAO toolpath / CNC simulation",
+          "src": "img/Capture d'écran 2026-06-11 100011.png",
+          "caption": "Completed Batch of Post-CNC Machined Aluminum Components",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture-1.png",
+          "caption": "3D CAD Solid Model of the Steering Interface Component",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/ddf.png",
+          "caption": "Technical Manufacturing Drawing and Geometric Dimensioning Sheet",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/nomenclature 1.png",
+          "caption": "Process Routing Sheet: Raw Cutting and Initial CNC Milling Phases (1/2)",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Nomenclature 12.png",
+          "caption": "Process Routing Sheet: Index Milling and Quality Inspection Phases (2/2)",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Nomenclaturede phase-Interface Volant .jpg",
+          "caption": "Alternative Turning-Focused Process Plan and Lathe Routing Strategy",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 100321.png",
+          "caption": "CNC Turning Operation: Part Secured in a 3-Jaw Chuck",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 100541.png",
+          "caption": "6 Completed Batch of Post-CNC Machined Aluminum ",
           "fit": "contain",
           "mobile": false
         }
