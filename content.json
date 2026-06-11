@@ -377,14 +377,14 @@
       "section": "B",
       "title": "Organic Vase Series — Published",
       "tags": "Blender · FreeCAD · OrcaSlicer · Cults3D · 2026",
-      "summary": "Designed, manufactured and sold an organic vase end-to-end — my first commercial product — then explored a wider series.",
-      "context": "I wanted to take a product all the way — design, manufacture and sell — entirely on my own, and to understand why early prints failed and how to fix them.",
-      "process": "I modelled an organic fluted vase in Blender (vase mode) and printed it in transparent PLA on a Creality Ender 5 S1, then published and listed it on Cults3D under the profile Ronaldo3D — my first end-to-end product. I extended it into a wider design exploration: hourglass forms, multi-lobe silhouettes with vertical turbulence, and helical textures, across 4+ physical iterations. The core learning was diagnosing why prints failed and identifying the fixes — those improvements are understood; current priorities are elsewhere.",
+      "summary": "An ongoing series of organic vases designed in Blender and printed in transparent PLA — from sculpt to physical object, listed for sale on Cults3D.",
+      "context": "Started as a design exploration at SSI, this project grew into a structured series: each iteration tests a different formal language — fluted surfaces, multi-lobe silhouettes, diagonal helix patterns, surface texture variations. Three models are now published on Cults3D under the profile Ronaldo3D.",
+      "process": "Each vase is sculpted in Blender using vase mode, which produces a single-wall continuous spiral path ideal for transparent filament. The model is sliced in OrcaSlicer, print parameters validated, then produced on the Creality Ender 5 S1 in transparent PLA. Each physical print either confirms the design or reveals what needs to change in the next iteration.",
       "results": [
         "First commercial product listed on Cults3D",
         "Organic Fluted Vase (free): 995 views, 6 likes, 5 comments",
         "Honeycomb Organic Vase (€0.50): 85 views, 1 like",
-        "4+ physical iterations"
+        "3+ physical iterations"
       ],
       "wide": false,
       "tools": "Blender, FreeCAD, OrcaSlicer, Ender 5 S1, Cults3D",
