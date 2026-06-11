@@ -500,36 +500,6 @@
           "caption": "Calibration Cube",
           "fit": "contain",
           "mobile": false
-        },
-        {
-          "src": "img/Capture d'écran 2026-06-11 102918.png",
-          "caption": "Extruder Empirical Testing Log and Parameter Scoring Matrix",
-          "fit": "contain",
-          "mobile": false
-        },
-        {
-          "src": "img/Capture d'écran 2026-06-11 103000.png",
-          "caption": "Live Calibration Dashboard and Material Performance Analytics",
-          "fit": "contain",
-          "mobile": false
-        },
-        {
-          "src": "img/Capture d'écran 2026-06-11 103010.png",
-          "caption": "Global Price Settings and Machine Profile Configurations",
-          "fit": "contain",
-          "mobile": false
-        },
-        {
-          "src": "img/Capture d'écran 2026-06-11 103053.png",
-          "caption": "Pre-Production Cost Estimator and Granular Expense Breakdown",
-          "fit": "contain",
-          "mobile": false
-        },
-        {
-          "src": "img/Capture d'écran 2026-06-11 103112.png",
-          "caption": "Logged Production Estimates and Historical Project Ledger",
-          "fit": "contain",
-          "mobile": false
         }
       ]
     },
@@ -591,6 +561,36 @@
         {
           "src": "img/tracker.png",
           "caption": "Dashboard / Google Sheets system",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 102918.png",
+          "caption": "Extruder Empirical Testing Log and Parameter Scoring Matrix",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103000.png",
+          "caption": "Live Calibration Dashboard and Material Performance Analytics",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103010.png",
+          "caption": "Global Price Settings and Machine Profile Configurations",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103053.png",
+          "caption": "Pre-Production Cost Estimator and Granular Expense Breakdown",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 103112.png",
+          "caption": "Logged Production Estimates and Historical Project Ledger",
           "fit": "contain",
           "mobile": false
         }
