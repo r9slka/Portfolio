@@ -559,7 +559,6 @@
       "note": "Built using AI-assisted development.",
       "images": [
         {
-          "src": "img/tracker.png",
           "caption": "Dashboard / Google Sheets system",
           "fit": "contain",
           "mobile": false
@@ -684,8 +683,14 @@
       "note": "Self-hosted system, built using AI-assisted development.",
       "images": [
         {
-          "src": "img/quote-system.jpg",
+          "src": "img/Capture d'écran 2026-06-11 123004.png",
           "caption": "Local AI Quote-Generation System",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 124651.png",
+          "caption": "AI-generated  email quote output",
           "fit": "contain",
           "mobile": false
         }
@@ -710,8 +715,14 @@
       "note": "Self-hosted infrastructure, built using AI-assisted development.",
       "images": [
         {
-          "src": "img/ai-server.jpg",
-          "caption": "Self-Hosted Private AI Server",
+          "src": "img/Capture d'écran 2026-06-11 123434-1.png",
+          "caption": "Self-Hosted Private AI Server OpenWebUI",
+          "fit": "contain",
+          "mobile": false
+        },
+        {
+          "src": "img/Capture d'écran 2026-06-11 124017.png",
+          "caption": "Self-Hosted Private AI Server Docker",
           "fit": "contain",
           "mobile": false
         }
