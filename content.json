@@ -489,7 +489,8 @@
       "process": "I developed systematic calibration protocols for both extruders. G5 Ultra (1.2 mm nozzle, PLA): a 3×3 test matrix across temperature and Z-height. G5 Pro (2.0 mm nozzle, PETG): a cross-shaped layout across 5 temperature steps, plus a 65 °C / 8 h pellet-drying protocol. Locked baselines were integrated into the production workflow.",
       "results": [
         "Locked baseline parameters for both machines",
-        "PETG drying protocol (65 °C / 8 h) in production"
+        "PETG drying protocol (65 °C / 8 h) in production",
+        "Stable parameters fed directly into the production tracker (→ C.01)"
       ],
       "wide": false,
       "tools": "OrcaSlicer, Piocreat G5 Ultra & G5 Pro, PLA/PETG pellets",
@@ -576,7 +577,7 @@
       "title": "3D Print Management System",
       "tags": "Google Sheets · Apps Script · JavaScript · 2026",
       "summary": "A complete production tracker — real-time cost tracking, dynamic menus and three live dashboards.",
-      "context": "3D printing at SSI ran blind — no real-time notion of cost, so there was no way to know whether a given print made or lost money.",
+      "context": "3D printing at SSI ran blind — no real-time notion of cost, so there was no way to know whether a given print made or lost money. The system was built alongside the pellet printer calibration work (→ B.04) — calibration data fed into the tracker from day one.",
       "process": "I built a complete production tracking system in Google Sheets with Apps Script. Reactive onEdit triggers update data live, dynamic dropdowns drive material and machine selection, and automatic per-print cost tracking feeds three production dashboards. A separate Apps Script handles G-code import and the price catalogue to avoid conflicts.",
       "results": [
         "Full per-print cost traceability",
